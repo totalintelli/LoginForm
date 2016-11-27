@@ -35,7 +35,6 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblResult = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblId
@@ -69,6 +68,7 @@
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.Size = new System.Drawing.Size(154, 21);
             this.txtPwd.TabIndex = 3;
+            this.txtPwd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPwd_KeyDown);
             // 
             // btnLogin
             // 
@@ -78,6 +78,7 @@
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "로그인";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnClose
             // 
@@ -87,6 +88,7 @@
             this.btnClose.TabIndex = 5;
             this.btnClose.Text = "닫기";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lblResult
             // 
@@ -98,21 +100,11 @@
             this.lblResult.TabIndex = 6;
             this.lblResult.Text = "결과 : ";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(63, 116);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 12);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "label4";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(419, 318);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(305, 147);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnLogin);
@@ -137,7 +129,6 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblResult;
-        private System.Windows.Forms.Label label4;
     }
 }
 
